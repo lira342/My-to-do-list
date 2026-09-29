@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1 id="header">My To-do list</h1>
+      <div class="input-header">
+        <h1>
+          <span id="date"></span>
+          <div class="to-do-input">
+            <input type="text" id="item" placeholder="Enter a task " />
+            <button id="enter">Enter</button>
+          </div>
+        </h1>
+      </div>
+      <div class="lists">
+        <section class="list-panel">
+          <h2>To-do</h2>
+          <div class="to-do-list"></div>
+        </section>
+        <section class="list-panel">
+          <h2>Done</h2>
+          <div class="done-list"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>

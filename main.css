@@ -1,0 +1,175 @@
+.update-controller {
+  display: none;
+}
+
+body {
+  background: linear-gradient(135deg, #ffb0d4 0%, #ff94b9 45%, #ff7aa8 100%);
+  color: #1c1c1c;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+#header {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.input-header {
+  margin-top: 1.5rem;
+  padding: 2.25rem 2.25rem 2.5rem;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.input-header h1 {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.input-header #date {
+  display: block;
+  font-size: 0.95rem;
+  color: #6b6b78;
+}
+
+.to-do-input {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+.to-do-input input {
+  flex: 1;
+  min-height: 54px;
+  padding: 0 1.25rem;
+  border: none;
+  border-radius: 999px;
+  background: #f4f4fb;
+  color: #1c1c1c;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(30, 30, 60, 0.08);
+}
+
+.to-do-input input::placeholder {
+  color: #a39fa8;
+}
+
+.to-do-input button {
+  min-width: 120px;
+  height: 54px;
+  border: none;
+  border-radius: 999px;
+  background: #ff5b99;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+  box-shadow: 0 15px 30px rgba(255, 91, 153, 0.25);
+}
+
+.to-do-input button:hover,
+.to-do-input button:focus {
+  transform: translateY(-1px);
+  background: #ff3f84;
+}
+
+.lists {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.list-panel {
+  width: 48%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fff;
+}
+
+.list-panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.to-do-list,
+.done-list {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 220px;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.to-do-item {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #444;
+  color: white;
+  background: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  cursor: pointer;
+  color: black;
+}
+
+.to-do-item.done .task-text {
+  text-decoration: line-through;
+  opacity: 0.75;
+  margin: 20px;
+}
+
+.to-do-item.selected {
+  background: #ffffff;
+  color: black;
+}
+
+.task-text {
+  user-select: none;
+  color: black;
+  margin: 20px;
+  width: 50px;
+}
+
+.controls {
+  display: none;
+  gap: 0.35rem;
+}
+
+.to-do-item.selected .controls {
+  display: inline-flex;
+  margin: 20px;
+}
+
+.controls button {
+  border: 1px solid #bbb;
+  padding: 0.2rem 0.5rem;
+  background: #fafafa;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
